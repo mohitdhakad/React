@@ -67,14 +67,15 @@ input {
 }
 input[type="text"] {
   border-radius: 0;
+  background-color: #f9f6f6;
 }
 body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
+  background-color: #d2c8c8;
+  color: #3a3636;
 }
 @media screen and (min-width: 620px) {
   body {
@@ -111,8 +112,8 @@ body {
   border-color: lightgrey;
 }
 .btn__primary {
-  color: #fff;
-  background-color: #000;
+  color: #4d4d4d;
+  background-color: #d6d0d0;
 }
 .btn-group {
   display: flex;
@@ -161,7 +162,7 @@ body {
 }
 /* END GLOBAL STYLES */
 .todoapp {
-  background: #fff;
+  background: #d6d0d0;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
@@ -196,7 +197,7 @@ body {
 }
 .input__lg {
   padding: 2rem;
-  border: 2px solid #000;
+  border: 2px solid #4d4d4d;
 }
 .input__lg:focus {
   border-color: #4d4d4d;
@@ -304,4 +305,69 @@ body {
 }
 .c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
+}
+
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 2em !important;
+  height: 1em;
+  display: inline-block;
+  font-size: 4.5rem !important; 
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.svg.MuiSvgIcon-root {
+  font-size: 5.5rem;
+}
+
+.element.style {
+  font-size: 4.5rem;
+}
+
+.MuiGrid-grid-xs-8 {
+  flex-grow: 15;
+  max-width: 70.666667%;
+  flex-basis: 66.666667%;
+  font-size: 4.5rem;
+}
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+element.style {
+}
+
+.MuiGrid-grid-xs-8 {
+    flex-grow: 0;
+    max-width: 4.5px;
+    flex-basis: 66.666667%;
+    height: 67;
+}
+
+.MuiGrid-item {
+    margin: 0px;
+    box-sizing: border-box;
+    width: 4px;
+}
+.MuiGrid-grid-xs-8 {
+    flex-grow: 15;
+    max-width: 70.666667%;
+    flex-basis: 66.666667%;
+    font-size: 4.5rem;
+}
+
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 4em;
+  height: 1em;
+  display: inline-block;
+  font-size: 4.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
 }

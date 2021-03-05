@@ -1,4 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+// import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+// import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
+import Grid from '@material-ui/core/Grid';
+
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+
+import CreateIcon from '@material-ui/icons/Create';
+import { Create } from "@material-ui/icons";
+
 
 function usePrevious(value) {
   const ref = useRef();
@@ -70,7 +79,7 @@ export default function Todo(props) {
           </label>
         </div>
         <div className="btn-group">
-        <button
+        {/* <button
           type="button"
           className="btn"
           onClick={() => setEditing(true)}
@@ -78,13 +87,18 @@ export default function Todo(props) {
         >
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
-          <button
-            type="button"
-            className="btn btn__danger"
-            onClick={() => props.deleteTask(props.id)}
-          >
-            Delete <span className="visually-hidden">{props.name}</span>
-          </button>
+        <span class="material-icons">&#xE87C;</span> */}
+        <Grid container className="MuiSvgIcon-root">
+            <Grid item xs={8}>
+              <CreateIcon onClick={() => setEditing(true)}  ref={editButtonRef}/>
+            </Grid>  
+          </Grid>
+
+          <Grid container className="MuiSvgIcon-root">
+            <Grid item xs={8}>
+              <DeleteForeverIcon onClick={() => props.deleteTask(props.id)}/>
+            </Grid>  
+          </Grid>
         </div>
     </div>
   );
@@ -97,7 +111,22 @@ export default function Todo(props) {
       editButtonRef.current.focus();
     }
   }, [wasEditing, isEditing]);
+
   return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
